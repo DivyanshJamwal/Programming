@@ -1,0 +1,129 @@
+emmet 
+table
+form
+list
+submit
+ img and anchor
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Links and images</title>
+</head>
+<body>
+    <a href="https://google.com" target="_blank">Go to google</a><br>
+    <a href="https://facebook.com" target="_blank">Go to facebook</a><br>
+    <a href="https://twitter.com" target="_blank">Go to twitter</a><br>
+    <a href="https://linkedin.com" target="_blank">Go to Linkedin</a><br>
+    <a href="/tut4.html" target="_blank">Tut 4</a>
+    <a href="/tut5.html" target="_blank">Tut 5</a>
+
+    <!-- Image is not present hence alt text is shown -->
+    <!-- <img src="harry.jpg" alt="Error loading image"> -->
+    <img src="https://source.unsplash.com/200x110/?nature,water" alt="remote image" width="233" height="34">
+
+
+</body>
+</html>
+
+meta tags
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="This is description">
+    <meta name="keywords" content="html, html tutorials, web development">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <title>Document</title>
+
+    <!-- This is how you include external css -->
+    <link rel="stylesheet" href="harry.css">
+
+    
+
+    <!-- This is how you include external JavaScript -->
+    <script src="harry.js"></script>
+</head>
+<body> 
+
+
+</body>
+</html>
+
+ 
+ 
+ 
+ 
+ 
+ form
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h2>This is HTML forms tutorial</h2>
+    <form action="backend.php">
+        <label for="name"> Name</label>
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            Role: <input type="text" name="myRole">
+        </div>
+        <br>
+        <div>
+            Email: <input type="email" name="myEmail">
+        </div>
+
+        <br>
+        <div>
+            Date: <input type="date" name="myDate">
+        </div>
+        <br>
+        <div>
+            Bonus: <input type="number" name="myBonus">
+        </div>
+        <br>
+        <div>
+            Are you eligible?: <input type="checkbox" name="myEligibility" checked>
+        </div>
+        <br>
+        <div>
+            Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender">
+            Other <input type="radio" name="myGender">
+        </div>
+
+        <br>
+        <div>
+            Write about yourself: <br><textarea name="myText" cols="90" rows="10"></textarea>
+        </div>
+
+        <br>
+        <div>
+            <label for="car">Car</label>
+            <select name="myCar" id="car">
+                <option value="ind">Indica</option>
+                <option value="swf" selected>Swift</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
+</body>
+
+</html>
