@@ -1,55 +1,108 @@
-import speech_recognition as sr
 import pyttsx3
+import speech_recognition as sr
+import datetime
+import wikipedia
+import webbrowser
 import os
+import smtplib
 
-speech = sr.Recognizer()
-
-try:
-    engine = pyttsx3.init()
-except ImportError:
-    print('Requested driver is not found')
-except RuntimeError:
-    print('Driver fails to initialize')
-
+engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 
-for voice in voices:
-    print(voice.id)
-engine.setProperty('voice','default')
-rate = engine.getProperty('rate')
-engine.setProperty('rate',rate)
+engine.setProperty('voice', voices[0].id)
 
-def speak_text_cmd(cmd):
-    engine.say(cmd)
+
+def speak(audio):
+    engine.say(audio)
     engine.runAndWait()
 
-def read_voice_cmd():
-    voice_text = ''
-    print('Listening...')
+
+def wishMe():
+    hour = int(datetime.datetime.now().hour)
+    if hour >= 0 and hour < 12:
+        speak("Good Morning!")
+
+    elif hour >= 12 and hour < 17:
+        speak("Good Afternoon!")
+
+    else:
+        speak("Good Evening!")
+
+    speak("I am Jarvis Sir. Please tell me how may I help you")
+
+def takeCommand():
+
+    r = sr.Recognizer()
     with sr.Microphone() as source:
-        audio = speech.listen(source)
+        print("Listening...")
+        r.pause_threshold = 1
+        audio = r.listen(source)
+
     try:
-        voice_text = speech.recognize_google(audio)
-    except sr.UnknownValueError:
-        pass
-    except sr.RequestError:
-        print('Network error')
-    return voice_text
+        print("Recognizing...")
+        query = r.recognize_google(audio, language='en-in')
+        print(f"User said: {query}\n")
 
-if __name__ == '__main__':
-    speak_text_cmd('Hello sir.. This is JARVIS as your Artificial Intelligence')
+    except Exception as e:
+        print(e)
+        print("Say that again please...")
+        return "None"
+    return query
 
+def sendEmail(to, content):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.login('youremail@gmail.com', 'your-password')
+    server.sendmail('youremail@gmail.com', to, content)
+    server.close()
+
+if __name__ == "__main__":
+    wishMe()
     while True:
 
-        voice_note = read_voice_cmd()
-        print('cmd : {}'.format(voice_note))
+        query = takeCommand().lower()
 
-        if 'Hello' in voice_note:
-            speak_text_cmd('Hello Sir. How can i help you?')
-            continue
-        elif 'open' in voice_note:
-            os.system('explorer C:\\ {}'.format(voice_note.replace('Open','')))
-            continue
-        elif 'bye' in voice_note:
-            speak_text_cmd('Bye sir. Happy to help you. Have a good day')
-            exit()
+
+        if 'wikipedia' in query:
+            speak('Searching Wikipedia...')
+            query = query.replace("wikipedia", "")
+            results = wikipedia.summary(query, sentences=2)
+            speak("According to Wikipedia")
+            print(results)
+            speak(results)
+
+        elif 'open youtube' in query:
+            webbrowser.open("youtube.com")
+
+        elif 'open google' in query:
+            webbrowser.open("google.com")
+
+        elif 'open stackoverflow' in query:
+            webbrowser.open("stackoverflow.com")
+
+
+        elif 'play music' in query:
+            music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
+            songs = os.listdir(music_dir)
+            print(songs)
+            os.startfile(os.path.join(music_dir, songs[0]))
+
+        elif 'the time' in query:
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"Sir, the time is {strTime}")
+
+        elif 'open code' in query:
+            codePath = "C:\\Users\\Devil\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            os.startfile(codePath)
+
+        elif 'email to divyansh' in query:
+            try:
+                speak("What should I say?")
+                content = takeCommand()
+                to = "divyanshsingh1754@gmail.com"
+                sendEmail(to, content)
+                speak("Email has been sent!")
+            except Exception as e:
+                print(e)
+                speak("Sorry . I am not able to send this email")
