@@ -1,9 +1,8 @@
-t = int(input())
-
-for i in range(t):
-    x = input()
-    a = ''
-    for item in x:
-        a = item+a
-    print(int(a))
+x = input()
+a = ''
+for i in x:
+    a = i+a
+print(int(a))
     
+
+#enter password.3 attempts or lock. successful login if correct. lock and denied for 30s if all attempts are wrong

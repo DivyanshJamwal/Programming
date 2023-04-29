@@ -1,8 +1,9 @@
 print("Welcome to the basic calculator!")
 print("Available operators are (+, -, /, *, %, <, >, =, avg(@), pow(^)) ! ")
 a = int(input("Enter your number : "))
-b = int(input("Enter the secondary number : "))
 op = input("Enter the arithmatic operator : ")
+b = int(input("Enter the secondary number : "))
+
 
 if(op == "+"):
     print(f"The sum of {a} + {b} is {a+b}")

@@ -1,7 +1,7 @@
-t = int(input())
+t = int(input("Enter test cases: "))
 
 for i in range(t):
-    x = int(input())
+    x = int(input("Enter the number: "))
     a = 1
     while(x>0):
         a = a*x
