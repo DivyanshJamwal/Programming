@@ -1,0 +1,43 @@
+h1{
+    font-family: Cooper;
+    font-style: italic;
+    font-size: 200%;
+    font-weight: bold;
+    color: #23afc9;
+    background-color: #99012f;
+    }
+    h2{
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-align: center;
+    }
+    p.Firstp{
+    border-style: solid;
+    width: 300px;
+    height: 50px;
+    border-color: #bcad34;
+    border-width: thick;
+    background-color: #234abc;
+    color: #ffffff;
+    padding: 20px 40px 60px 100px;
+    }
+    p.Secondp{
+    border-style: solid;
+    width: 400px;
+    height: 50px;
+    border-color: #bcad34;
+    border-width: thick;
+    background-color: #2ffabc;
+    color: #ffffff;
+    padding: 20px 40px 60px 100px;
+    }
+    p#Thirdp{
+    border-style: solid;
+    width: 200px;
+    height: 50px;
+    border-color: #bcad34;
+    border-width: thick;
+    background-color: #200abc;
+    color: #ffffff;
+    padding: 20px 40px 60px 100px;
+    }

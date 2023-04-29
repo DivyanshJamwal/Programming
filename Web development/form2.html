@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<label for="f1">Select File from Dialog box</label>
+<input type="file" id="f1" name="file1" accept="image/jpeg,image/png" ><br/><br/>
+<label for="tel1">Enter telephone number</label>
+<input type="tel" id="tel1" name="telphone1" placeholder="123-4567-8901" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br/><br/>
+<label for="num2">Enter numer</label>
+<input type="number" id="num2" name="number2" step="3"><br/><br/>
+<label for="dl1">Example of datalist (Select your city)</label>
+<input list="city" id="dl1">
+<datalist id="city">>
+<option value="Delhi">
+<option value="Goa">
+<option value="Bombay">
+<option value="Kolkata">
+<option value="Jalandhar">
+</datalist><br/><br/>
+
+<label for="sl1">Select branch</label>
+<select name="branch" id="sl1">
+<option value="cse">Computer Science and Engineering</option>
+<option value="ece">Electronics and Communication Engineering</option>
+<option value="me">Mechanical Engineering</option>
+</select><br/><br/>
+<textarea rows="10" cols="40">
+This is the example of text area
+</textarea><br/><br/>
+<label for="pw">Enter your password</label>
+<input type="password" id="pw" name="password1"><br/><br/>
+<label for="gender">Select your Gender</label>
+<input type="radio" id="gender" name="gender1" value="male"/>Male
+<input type="radio" id="gender" name="gender1" value="female" checked/>FeMale
+<input type="radio" id="gender" name="gender1" value="trans"/>Transgender<br/><br/>
+<label for="hobbies">Select your hobbies (you can select multiple hobbies)</label>
+<input type="checkbox" id="cricket" name="cricket" value="cricket">
+<label for="cricket">Cricket</label>
+<input type="checkbox" id="hockey" name="hockey" value="hockey">
+<label for="hockey">Hockey</label>
+<input type="checkbox" id="tennis" name="tennis" value="tennis">
+<label for="tennis">Tennis</label>
+</body>
+</html>
