@@ -1,3 +1,5 @@
+package Coding_Practice.JAVA;
+
 class Demo {
     int a; int b;
     String st1; String st2;

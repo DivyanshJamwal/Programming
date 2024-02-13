@@ -1,3 +1,5 @@
+package Coding_Practice.JAVA;
+
 public class splitmtd {
     public static void main(String[] args) {
         String str = "BMW,Mercedes,Mclaren,Porsche";

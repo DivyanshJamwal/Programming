@@ -1,3 +1,5 @@
+package Coding_Practice.JAVA;
+
 import java.util.*;
 public class GuessGame {
 public static void main(String[] args) {

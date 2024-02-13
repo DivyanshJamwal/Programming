@@ -1,3 +1,5 @@
+package Coding_Practice.JAVA;
+
 public class p2 {
     public static void main(String...rk) {
         float x = Float.parseFloat(rk[0]);

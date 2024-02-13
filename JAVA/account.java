@@ -1,3 +1,5 @@
+package Coding_Practice.JAVA;
+
 import java.util.Scanner;
 public class account {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package Coding_Practice.JAVA;
+
 public class set_mtd {
     public static void main(String[] args) {
         StringBuilder sc = new StringBuilder("SPADE");

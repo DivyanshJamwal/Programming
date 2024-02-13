@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: rgb(179, 149, 179);
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" value="Hover" id="btn" onmouseover="changeColorOnMouseOver()" onmouseout="changeColorOnMouseOut()">
+        <script text="JavaScript">
+            function changeColorOnMouseOver(){
+                document.getElementById("btn").style.background="red";
+                document.getElementById("btn").style.color="yellow";
+            }
+            function changeColorOnMouseOut(){
+                document.getElementById("btn").style.background="cadetblue";
+                document.getElementById("btn").style.color="white";
+            }
+        </script>
+    </body>
+</html>

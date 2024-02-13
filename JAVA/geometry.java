@@ -1,3 +1,5 @@
+package Coding_Practice.JAVA;
+
 /*
 Enter the shape
 Enter the meaurement type

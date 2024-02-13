@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    volumes:
+      - wordpress_files:/var/www/html
+    ports:
+      - "80:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: my_wordpress_db_password
+      WORDPRESS_DB_NAME: wordpress
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my_db_root_password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: my_wordpress_db_password
+volumes:
+    wordpress_files:
+    db_data:
+
+# https://github.com/docker/awesome-compose
+# https://medium.com/@edmond.dantes/setup-minikube-with-docker-driver-2e27dc03f196
+# https://kubernetes.io/docs/home/
+# https://www.vultr.com/docs/install-nagios-on-ubuntu-20-04/
+# https://github.com/deviantony/docker-elk
+# https://catalog.workshops.aws/networking/en-US/beginner/lab1
+# https://catalog.us-east-1.prod.workshops.aws/workshops/3de93ad5-ebbe-4258-b977-b45cdfe661f1/en-US/introduction
+# https://www.geeksforgeeks.org/difference-between-olap-and-oltp-in-dbms/
+
+#Lamp stack
+#wordpress
+#word press using docker container
+#https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html -- Lamp stack reference
+#https://github.com/teddysun/lamp
+#https://github.com/sprintcube/docker-compose-lamp
+#https://www.cloudways.com/blog/host-wordpress-on-aws/
+#https://catalog.us-east-1.prod.workshops.aws/workshops/ffb2b90a-c99b-499d-a077-551cbf0dee84/en-US
+#https://learn.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-lamp-stack

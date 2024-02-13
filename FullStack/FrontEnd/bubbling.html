@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            border: 3px solid;
+            margin: auto;
+            height: 200px;
+            width: 400px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        #btn{
+            border: 3px solid;
+            margin: auto;
+            height: 50px;
+            width: 100px;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="main" onclick="chn('main')">
+        <button id="btn" onclick="chnc('btn')">click</button>
+    </div>
+    <script>
+        function chn(x){
+            document.getElementById(x).style.backgroundColor="Yellow";
+        }
+        function chnc(y){
+            document.getElementById(y).style.backgroundColor="Blue";
+        }
+    </script>
+</body>
+</html>

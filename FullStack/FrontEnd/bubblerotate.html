@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            height: 600px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #div1 {
+            height: 50%;
+            width: 30%;
+            border: 7px solid rgb(14, 63, 14);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #div2 {
+            height: 50%;
+            width: 50%;
+            border: 7px solid rgb(14, 63, 14);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #div3 {
+            height: 50%;
+            width: 40%;
+            border: 7px solid rgb(14, 63, 14);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+        }
+        @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <div id="div1" onclick="rotation1('div1')">
+        <div id="div2" onclick="rotation2('div2')">
+            <div id="div3" onclick="rotation3('div3')">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function rotation1(id) {
+            document.getElementById(id).style.borderColor = "fuchsia";
+            document.getElementById(id).style.transform = "rotate(180deg)";
+            document.getElementById(id).style.animation = "spin 5s";
+
+        }
+        function rotation2(id) {
+            document.getElementById(id).style.borderColor = "red";
+            document.getElementById(id).style.transform = "rotate(180deg)";
+            document.getElementById(id).style.animation = "spin 5s";
+        }
+        function rotation3(id) {
+            document.getElementById(id).style.borderColor = "yellow";
+            document.getElementById(id).style.transform = "rotate(180deg)";
+            document.getElementById(id).style.animation = "spin 5s";
+        }
+
+
+    </script>
+
+</body>
+
+</html>

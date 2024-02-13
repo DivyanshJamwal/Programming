@@ -1,3 +1,5 @@
+package Coding_Practice.JAVA;
+
 class Bank{
     int time;
     class Loan{

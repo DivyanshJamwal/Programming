@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("body").css({
+            "height": "600px",
+            "display": "flex",
+            "flex-direction": "row",
+            "align-items": "center",
+            "justify-content": "center",
+            "background-color": "cyan"
+        })
+
+        $("#div1").css({
+            "height": "70%",
+            "width": "50%",
+            "border": "12px solid red",
+            "display": "flex",
+           " flex-direction": "row",
+            "align-items": "center",
+            "justify-content": "center",
+
+        })
+
+        $("#div2").css({
+            "height": "50%",
+            "width": "50%",
+            "border": "12px solid yellow",
+            "display": "flex",
+            "flex-direction": "row",
+            "align-items": "center",
+            "justify-content": "center",
+
+        })
+
+        $("#div3").css({
+            "height": "40%",
+            "width": "35%",
+            "border": "12px solid blue",
+            "display": "flex",
+            "flex-direction": "row",
+            "align-items": "center",
+            "justify-content": "center",
+        })
+
+        $("#div1").mouseenter(function(){
+            $("#div1").css({
+                transform : "rotate(180deg)",
+                transition : "3s",
+                "border-color": "green",
+            })
+        })
+        $("#div1").mouseleave(function(){
+            $("#div1").css({
+                transform : "rotate(-180deg)",
+                transition : "3s",
+                "border-color": "red",
+            })
+        })
+        $("#div2").mouseenter(function(){
+            $("#div2").css({
+                transform : "rotate(180deg)",
+                transition : "2s",
+                "border-color": "red",
+            })
+        })
+        $("#div2").mouseleave(function(){
+            $("#div2").css({
+                transform : "rotate(-180deg)",
+                transition : "2s",
+                "border-color": "yellow",
+            })
+        })
+        $("#div3").mouseenter(function(){
+            $("#div3").css({
+                transform : "rotate(180deg)",
+                transition : "1s",
+                "border-color": "orange",
+            })
+        })
+        $("#div3").mouseleave(function(){
+            $("#div3").css({
+                transform : "rotate(-180deg)",
+                transition : "1s",
+                "border-color": "blue",
+            })
+        })
+        $("#div3").dblclick(function(){
+            $(this).hide()
+        })
+        $("*").css({
+            "background-color": "cyan",
+        })
+
+    </script>
+</body>
+</html>

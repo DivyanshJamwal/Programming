@@ -1,0 +1,5 @@
+<p>Name : {{prod.Name}}</p>
+<p>Price : {{'$'+ prod.Price}}</p>
+<p>Color : {{prod.Color}}</p>
+<p>DP : {{ getdisc().toFixed(2) }}</p>
+<p>{{ prod.Instock > 0 ? 'Only ' + prod.Instock + ' Items left' : 'Not in Stock'}}</p>

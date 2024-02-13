@@ -1,0 +1,20 @@
+.dm{
+    height: 600px;
+    border: 10px solid red;
+    padding: 50px;
+    margin: 20px;
+    background-color: rgb(27, 4, 35);
+    display: flex;
+    border-radius: 40px;
+}
+.d{
+    margin: auto;
+}
+
+.d:hover .i{
+    opacity: 0.6;
+}
+.i{
+    border-radius: 40px;
+    border: 3px solid rgb(28, 87, 142);
+}

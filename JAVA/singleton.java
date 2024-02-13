@@ -1,3 +1,5 @@
+package Coding_Practice.JAVA;
+
 class dem{
     static dem d;
     private dem(){

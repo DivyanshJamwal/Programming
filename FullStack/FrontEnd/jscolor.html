@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            display: flex;
+            border: 3px solid;
+            height: 600px;
+            width: 600px;
+            margin: auto;
+            background-color: fuchsia;
+        }
+        .box{
+            border: 3px solid;
+            height: 100px;
+            width: 200px;
+            margin: auto;
+            background-color: cyan;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 90px;
+        }
+        .btn{
+            height: 50px;
+            width: 100px;
+            margin-top: 300px;
+            border: 3px solid;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+        function clrch(x){
+            document.getElementById(x).style.backgroundColor="purple";
+        }
+        function clr(x){
+            document.getElementById(x).style.backgroundColor="violet";
+        }
+        function btn(){
+            alert("welcome to this page!")
+        }
+    </script>
+</head>
+<body>
+    <div id = main>
+        <div id="box1" class="box" onmouseover="clrch('box1')" onmouseout="clr('box1')">Box 1</div>
+        <div id="box2" class="box" onmouseover="clrch('box2')" onmouseout="clr('box2')">Box 2</div>
+        <button class="btn" onclick="btn()">Click Me</button>
+    </div>
+</body>
+</html>

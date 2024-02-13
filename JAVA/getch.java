@@ -1,3 +1,5 @@
+package Coding_Practice.JAVA;
+
 public class getch {
     public static void main(String[] args) {
         String a = "java programming";
