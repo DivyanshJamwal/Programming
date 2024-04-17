@@ -5,6 +5,7 @@ class pipess{
     public static void main(String[] args) throws IOException {
         Pipe pipe = Pipe.open();
         Pipe.SinkChannel sinkChannel = pipe.sink();
+        @SuppressWarnings("unused")
         String str = "CSE406 Advance Java";
         ByteBuffer bb = ByteBuffer.allocate(1024);
         bb.clear();

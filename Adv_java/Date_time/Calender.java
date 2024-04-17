@@ -8,8 +8,10 @@ public class Calender {
         @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the year");
+        @SuppressWarnings("unused")
         int yr = sc.nextInt();
         System.out.println("Enter the month");
+        @SuppressWarnings("unused")
         int mn = sc.nextInt();
 
         System.out.print("Sun\t");
