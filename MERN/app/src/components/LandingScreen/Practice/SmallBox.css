@@ -1,0 +1,13 @@
+#sb-container{
+    padding: 20px;
+    border: 2px solid black;
+}
+.even{
+ background-color: yellow;
+}
+.odd{
+ background-color: red;
+}
+.prime{
+    background-color: blue;
+}

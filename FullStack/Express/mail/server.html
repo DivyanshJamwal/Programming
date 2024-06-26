@@ -1,0 +1,48 @@
+index.html: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Sender</title>
+</head>
+<body>
+  <h1>Email Sender</h1>
+  <form id="emailForm" enctype="multipart/form-data">
+    <label for="email">Recipient Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" required><br><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+    <label for="attachment">Attachment:</label>
+    <input type="file" id="attachment" name="attachment"><br><br>
+    <button type="submit">Send Email</button>
+  </form>
+
+  <script>
+    const emailForm = document.getElementById('emailForm');
+
+    emailForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(emailForm);
+
+      try {
+        const response = await fetch('/send-email', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          alert('Email sent successfully');
+        } else {
+          alert('Error sending email');
+        }
+      } catch (error) {
+        console.error('Error sending email:', error);
+        alert('Error sending email');
+      }
+    });
+  </script>
+</body>
+</html>
