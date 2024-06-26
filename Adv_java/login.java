@@ -3,7 +3,7 @@ import java.awt.Color;
 import java.awt.event.*;
 
 
-public class login {
+public class Login {
     public static void main(String[] args) {
         JFrame f = new JFrame("Login Form");
         JLabel l = new JLabel("Username");
