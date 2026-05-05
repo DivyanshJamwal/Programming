@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment News</title>
+    <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <h1>Entertainment News</h1>
+    <p>Welcome to the entertainment news section. Here you will find the latest updates on movies, music, and celebrity news.</p>
+    
+    <h2>Categories</h2>
+    <ul>
+        <li><a href="{% url 'technology' %}">Technology</a></li>
+        <li><a href="{% url 'politics' %}">Politics</a></li>
+        <li><a href="{% url 'sports' %}">Sports</a></li>
+        <li><a href="{% url 'entertainment' %}">Entertainment</a></li>
+    </ul>
+    
+    <h2>Latest Articles</h2>
+    <h3>AI Revolution: What's Next?</h3>
+    <h6>Category : Technology</h6><br>
+    <p>Aritficial Intelligence is advancing at an unprecendented pace, but what does the future hold</p><hr><br>
+    <h2>Latest Articles</h2>
+    <h3>AI Revolution: What's Next</h3>
+    <h6>Category : Technology</h6><br>
+    <p>Aritficial Intelligence is advancing at an unprecendented pace, but what does the future hold</p><hr>
+
+    
+    {% endblock %}
+</body>
+</html>

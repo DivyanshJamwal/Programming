@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports News</title>
+    <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <h1>Sports News</h1>
+    <p>Latest updates and articles on sports.</p>
+    <ul>
+        <li><a href="{% url 'news:sports' %}">Sports Article 1</a></li>
+        <li><a href="{% url 'news:sports' %}">Sports Article 2</a></li>
+        <li><a href="{% url 'news:sports' %}">Sports Article 3</a></li>
+    </ul>
+
+    <h2>Latest Articles</h2>
+    <h3>AI Revolution: What's Next?</h3>
+    <h6>Category : Technology</h6><br>
+    <p>Aritficial Intelligence is advancing at an unprecendented pace, but what does the future hold</p><hr><br>
+    <h2>Latest Articles</h2>
+    <h3>AI Revolution: What's Next</h3>
+    <h6>Category : Technology</h6><br>
+    <p>Aritficial Intelligence is advancing at an unprecendented pace, but what does the future hold</p><hr>
+
+    {% endblock %}
+</body>
+</html>

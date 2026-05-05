@@ -7,7 +7,6 @@ import Cities from '../components/LandingScreen/Cities'
 const LandingScreen = () => {
   return (
     <>
-    <Navbar/>
     <Hero/>
     {/* <Cities/> */}
     </>

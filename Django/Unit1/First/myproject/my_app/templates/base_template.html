@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .content-box {
+            font-size: 21px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .content-box:hover {
+            transform: scale(1.1);
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #5599ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #99ddff;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <div class="content-box">{{ content }}</div>
+        <a href="/" class="btn">⬅ Go Back</a>
+    </div>
+</body>
+</html>

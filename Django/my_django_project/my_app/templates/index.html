@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Categories</title>
+    {% extends "base.html" %}
+    {% load static %}
+</head>
+<body>
+
+    {% block title %}News Categories{% endblock %}
+
+    {% block content %}
+    <h1>News Categories</h1>
+    <ul>
+        <li><a href="{% url 'technology' %}">Technology</a></li>
+        <li><a href="{% url 'politics' %}">Politics</a></li>
+        <li><a href="{% url 'sports' %}">Sports</a></li>
+        <li><a href="{% url 'entertainment' %}">Entertainment</a></li>
+    </ul>
+    {% endblock %}
+</body>
+</html>

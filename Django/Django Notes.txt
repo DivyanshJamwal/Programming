@@ -1,0 +1,75 @@
+MVT ARCHITECTURE
+Model - It defines the data structure of application.
+	It also helps in simplifying the interaction with database.
+	You can create a class that helps to create tables and fields for your database.
+
+Views - They are python functions and you can create them as classes.
+	In this you will receive HTTP request and reflects HTTP response.
+
+Templates - It is an HTML file which is mixed with some type of syntax that is used in Django.
+       	    This allows you to dynamic generate content based on the data that is sent from view.
+
+
+Django Framework -> URL -> VIEW   ->	Model      -> Data
+					Template
+
+
+URL Dispatcher - In this requests maps with further views.
+Admin Interface - In this administrator mange and update data without creating views and interfaces.
+Forms - In this user input and output done through forms.
+Authorization - Secure with functionality.   
+Authentication - Permissions and Sessions.
+
+
+
+
+INSTALLATION
+
+python -m venv myenv
+myenv\Scripts\activate 
+pip install django
+django-admin --version
+python -m django version
+django-admin startproject myproject
+cd myproject
+python manage.py runserver
+http://127.0.0.1:8000/
+python manage.py startapp my_app
+
+
+
+
+
+Django admin - It is built in command utility that shifts with django.
+	       Its used for various administrative task in django project such as creating new projects, 
+	       creating apps within a project, managing migrations, running the development server and more. 
+
+Manage.py - This is command line utility which helps to manage your project in certain ways like it can help 
+	    running in development of server, creation of migration and certain other aspects of projects.
+	    It also creates folder inside the main folder.
+
+Settings.py - The purpose of this file is to hold the configuration settings of your project like 
+	      database settings, installed apps, middleware, static files and other configuration.
+
+Url.py - This defines the url routing for your entire project.
+	 This will help in mapping your url with views.
+
+Wsgi.py - It stands for Web Server Gateway Interface.
+	  It is used for running django application.
+	  It is specific for deploying the django app on the production server.
+
+Asgi.py - It is quite similar to Wsgi.py.
+	  It is Asynchronous Gateway Interface.
+	  It is specific for handling asynchronous code in django.
+
+
+
+
+
+
+
+
+
+
+
+

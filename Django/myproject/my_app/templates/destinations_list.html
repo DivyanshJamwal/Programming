@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destinations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 200px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px;
+        }
+        li img {
+            width: 100%;
+            height: 300px;
+        }
+        li:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s ease-in-out;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Destinations</h1>
+    <ul>
+        <li>
+            <a href="{% url 'destination_detail' 1 %}">
+                <img src="https://images.unsplash.com/photo-1565881606991-789a8dff9dbb" alt="Paris">
+                Paris
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'destination_detail' 2 %}">
+                <img src="https://images.pexels.com/photos/13937499/pexels-photo-13937499.jpeg" alt="New York">
+                New York
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'destination_detail' 3 %}">
+                <img src="https://images.pexels.com/photos/8451450/pexels-photo-8451450.jpeg" alt="Tokyo">
+                Tokyo
+            </a>
+        </li>
+    </ul>
+</body>
+</html>
